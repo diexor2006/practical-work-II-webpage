@@ -108,8 +108,8 @@
             flex: 1; /* Se expande para ocupar todo el espacio vertical restante */
         }
 
-            /* Barra lateral */
-            .sidebar {
+         /* Barra lateral */
+         .sidebar {
             width: 25%;
             padding: 10px;
         }
@@ -124,21 +124,25 @@
             padding: 0;
         }
 
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
         .sidebar ul ul {
             margin-left: 20px;
-            display: none;
+            display: none; /* Oculta las asignaturas por defecto */
         }
 
         .sidebar ul ul.active {
-            display: block;
+            display: block; /* Muestra las asignaturas del curso activo */
         }
 
-        .sidebar ul li a {
+        .sidebar ul ul li a {
             color: #002366;
             text-decoration: none;
         }
 
-        .sidebar ul li a:hover {
+        .sidebar ul ul li a:hover {
             text-decoration: underline;
         }
 
@@ -187,41 +191,41 @@
 
    <!-- Sección principal -->
    <main class="container">
-    <!-- Barra lateral -->
-    <div class="sidebar">
-        <h2>Cursos</h2>
-        <ul>
-            <li>
-                <a href="#" onclick="toggleSubjects('course1')">Curso 1</a>
-                <ul id="course1">
-                    <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
-                    <li><a href="#">Collage</a></li>
-                    <li><a href="#">Lógica y Pensamiento Crítico</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="toggleSubjects('course2')">Curso 2</a>
-                <ul id="course2">
-                    <li><a href="#">Asignatura 1</a></li>
-                    <li><a href="#">Asignatura 2</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="toggleSubjects('course3')">Curso 3</a>
-                <ul id="course3">
-                    <li><a href="#">Asignatura 1</a></li>
-                    <li><a href="#">Asignatura 2</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="toggleSubjects('course4')">Curso 4</a>
-                <ul id="course4">
-                    <li><a href="#">Asignatura 1</a></li>
-                    <li><a href="#">Asignatura 2</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <h2>Cursos</h2>
+            <ul>
+                <li>
+                    <a href="curso1.html" onclick="toggleSubjects('course1')">Curso 1</a>
+                    <ul id="course1" class="active">
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                        <li><a href="#">Collage</a></li>
+                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="curso2.html" onclick="toggleSubjects('course2')">Curso 2</a>
+                    <ul id="course2">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course3')">Curso 3</a>
+                    <ul id="course3">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course4')">Curso 4</a>
+                    <ul id="course4">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
 
         <!-- Contenido principal -->

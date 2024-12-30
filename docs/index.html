@@ -125,21 +125,25 @@
             padding: 0;
         }
 
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
         .sidebar ul ul {
             margin-left: 20px;
-            display: none;
+            display: none; /* Oculta las asignaturas por defecto */
         }
 
         .sidebar ul ul.active {
-            display: block;
+            display: block; /* Muestra las asignaturas del curso activo */
         }
 
-        .sidebar ul li a {
+        .sidebar ul ul li a {
             color: #002366;
             text-decoration: none;
         }
 
-        .sidebar ul li a:hover {
+        .sidebar ul ul li a:hover {
             text-decoration: underline;
         }
 
@@ -217,7 +221,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" onclick="toggleSubjects('course2')">Curso 2</a>
+                    <a href="curso2.html" onclick="toggleSubjects('course2')">Curso 2</a>
                     <ul id="course2">
                         <li><a href="#">Asignatura 1</a></li>
                         <li><a href="#">Asignatura 2</a></li>
