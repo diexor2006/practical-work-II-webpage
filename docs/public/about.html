@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata básica -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!-- Estilos -->
+    <style>
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-y: auto; /* Permite el desplazamiento */
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #001a4d;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .header-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #001a4d;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: white;
+            color: #002366;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #001a4d;
+            padding: 10px;
+        }
+
+        .breadcrumbs a {
+            color: #aad4ff;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        main {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Menú de cursos */
+        .sidebar {
+            width: 25%;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            color: #002366;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #002366;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección principal */
+        .main-content {
+            flex: 1;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            color: #002366;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #001a4d; /* Color de fondo azul */
+            color: white;
+            padding: 15px;
+        }
+
+        .profile-header img {
+            width: 80px; /* Hace la imagen más pequeña */
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .separator {
+            border-top: 2px solid black;
+            margin: 20px 0;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #001a4d;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .footer-icons a {
+            background-color: #ffffff;
+            padding: 0;
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-icons img {
+            width: auto;
+            height: 50px;
+        }
+
+        /* Sección de redes sociales */
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media img {
+            width: 50px; /* Tamaño de iconos de redes sociales */
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .okey img {
+            width: 200px; /* Tamaño de iconos de redes sociales */
+            height: auto;
+            margin: 0 10px;  
+        }
+        /* Nueva clase para ocultar y mostrar */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: About</div>
+        <div class="header-logo">
+            <a href="https://www.ufv.es" target="_blank">
+                <img src="../images/Logo_UFV.jpg" alt="Logo UFV">
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="#" class="active">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="net.html">Net</a>
+        <a href="#">Offtopic</a>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="#">Where am I?</a> &gt; <span>About</span>
+    </div>
+
+    <!-- Contenedor principal -->
+    <main class="container">
+        <!-- Menú de cursos -->
+        <div class="sidebar">
+            <h2>Degree</h2>
+            <ul>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course1')"><strong>Year 1</strong></a>
+                    <ul id="course1" class="hidden">
+                        <li><a href="curso1.html">General</a></li>
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                        <li><a href="#">Collage</a></li>
+                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course2')"><strong>Year 2</strong></a>
+                    <ul id="course2" class="hidden">
+                        <li><a href="curso2.html">General</a></li>
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course3')"><strong>Year 3</strong></a>
+                    <ul id="course3" class="hidden">
+                        <li><a href="curso3.html">General</a></li>
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course4')"><strong>Year 4</strong></a>
+                    <ul id="course4" class="hidden">
+                        <li><a href="curso4.html">General</a></li>
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course5')"><strong>Year 5</strong></a>
+                    <ul id="course5" class="hidden">
+                        <li><a href="curso5.html">General</a></li>
+                        <li><a href="#">Asignatura 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <div class="profile-header">
+                <img src="../images/unnamed.jpg" alt="Profile">
+                <h2>¿Who?</h2>
+                <p>My name is Borja Rincón Lozada. An student from UFV, of the doble degree Computer Science engineering and Business analytics. Currently 18 years old and hoping to see AI revolution up close</p>
+            </div>
+
+            <section>
+                <h2>Who I Think I Am</h2>
+                <p>I see myself as a genuine person, I love to share experiences with other people, but I enjoy more everything that involves informatics. Thats one of the reasons I chose this degree, and despite of some criticisms, I recon its going to be usefull to study Business analytics insted of only computer engineering. Thats why I think I´m a person that follow through with the decision he made.</p>
+            </section>
+
+            <section>
+                <h2>WHO I REALLY WANT TO BE</h2>
+                <p>I want to be a person that enjoys his routine. I don´t want to wake up every day and struggle because of a job I don´t like. I know it´s unusual, but thats who I want to be. And i want the same thing for the others, so I want to like the routine to my peers. I would love to die with no regretments, but as its mostly imposible, try to have the less, the better. </p>
+            </section>
+
+            <section>
+                <h2>My Curriculum Vitae</h2>
+                <p><a href="../images/CV.png" target="_blank">Download My CV</a></p>
+                <div class="okey">
+                <img src="../images/okey.jpg" alt="Okey">
+                </div>
+            </section>
+
+            <div class="social-media">
+                <h3>My social media</h3>
+                <a href="https://www.instagram.com/brjx.rncn/" target="_blank">
+                    <img src="../images/instagram.jpg" alt="Instagram">
+                </a>
+                <a href="https://x.com/brjx_rncn" target="_blank">
+                    <img src="../images/x.png" alt="Twitter">
+                </a>
+                <a href="https://www.tiktok.com/@brjx.rncn" target="_blank">
+                    <img src="../images/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://linkedin.com" target="_blank">
+                <img src="../images/linkedin_logo.png" alt="Logo LinkedIn">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="../images/GitHub_logo_2013.jpg" alt="Logo GitHub">
+            </a>
+        </div>
+        <p>&copy; 2024 UFV</p>
+    </footer>
+
+    <script>
+        function toggleSubjects(courseId) {
+            const element = document.getElementById(courseId);
+            element.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+
+
