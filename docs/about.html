@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <!-- Metadata básica -->
+      <meta charset="UTF-8"> <!-- Define la codificación de caracteres en UTF-8 -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura compatibilidad con navegadores antiguos -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño para dispositivos móviles -->
+      <title>About me</title>
+  
+      <!-- Estilos -->
+      <style>
+          /* Estilos globales */
+          body {
+              margin: 0; /* Elimina los márgenes por defecto del navegador */
+              font-family: Arial, sans-serif; /* Fuente general de la página */
+              display: flex; /* Hace que el cuerpo sea un contenedor flexible */
+              flex-direction: column; /* Organiza los elementos en columna */
+              align-items: center; /* Centra horizontalmente los elementos */
+              height: 100vh; /* La página ocupa toda la altura de la pantalla */
+          }
+  
+          .container {
+              max-width: 1000px; /* Ancho máximo del contenido */
+              width: 100%; /* Ocupa todo el ancho disponible */
+              margin: 0 auto; /* Centra horizontalmente la caja */
+          }
+  
+          /* Encabezado */
+          header {
+              background-color: #002366; /* Fondo azul oscuro */
+              color: white; /* Texto blanco */
+              padding: 20px; /* Espaciado interno */
+              display: flex; /* Flexbox para organizar los elementos */
+              justify-content: space-between; /* Distribuye los elementos a los extremos */
+              align-items: center; /* Alinea verticalmente los elementos */
+          }
+  
+          .header-title {
+              font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
+          }
+  
+          .header-logo img {
+              width: 200px; /* Ancho del logo */
+              height: auto; /* Mantiene la proporción del logo */
+          }
+  
+          /* Barra de navegación */
+          nav {
+              background-color: #001a4d; /* Fondo azul oscuro */
+              padding: 10px 0; /* Espaciado vertical interno */
+              text-align: center; /* Centra los elementos horizontalmente */
+          }
+  
+          nav a {
+              margin: 0; /* Sin márgenes entre enlaces */
+              color: white; /* Color del texto blanco */
+              text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+              padding: 10px 15px; /* Espaciado interno de los botones */
+              background-color: #002366; /* Fondo azul más claro */
+              border-radius: 5px; /* Bordes redondeados */
+              display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
+              width: 174px; /* Ancho fijo para los botones */
+              text-align: center; /* Centra el texto dentro de los botones */
+          }
+  
+          nav a:hover {
+              background-color: #555; /* Cambia el fondo al pasar el cursor */
+          }
+  
+          nav a.active {
+              background-color: white; /* Fondo blanco para el botón activo */
+              color: #002366; /* Texto azul oscuro */
+          }
+  
+          /* Bread crumbs */
+          .breadcrumbs {
+              font-size: 0.9rem; /* Tamaño de texto más pequeño */
+              color: #fff; /* Texto blanco */
+              margin: 0px 0; /* Espaciado vertical */
+              text-align: left; /* Alinea a la izquierda */
+              background-color: #002366; /* Fondo azul oscuro */
+              padding: 10px; /* Espaciado interno */
+              width: 66.3%; /*  ancho */
+          }
+  
+          .breadcrumbs a {
+              color: #aad4ff; /* Color azul claro para los enlaces */
+              text-decoration: none; /* Sin subrayado */
+          }
+  
+          .breadcrumbs a:hover {
+              text-decoration: underline; /* Subrayado al pasar el cursor */
+          }
+  
+          /* Franja azul para los íconos del pie de página */
+          .blue-strip {
+              background-color: #002366; /* Fondo azul oscuro */
+              display: flex; /* Flexbox para organizar íconos */
+              justify-content: space-around; /* Espaciado uniforme entre los íconos */
+              padding: 20px 0; /* Espaciado vertical interno */
+              width: 1000px; /* Ancho fijo */
+          }
+  
+        /* Sección principal */
+        main {
+            display: flex;
+            padding: 20px;
+            background-color: #ffffff;
+            flex: 1;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul ul {
+            margin-left: 20px;
+            display: none; /* Oculta las asignaturas por defecto */
+        }
+
+        .sidebar ul ul.active {
+            display: block; /* Muestra las asignaturas del curso activo */
+        }
+
+        .sidebar ul ul li a {
+            color: #002366;
+            text-decoration: none;
+        }
+
+        .sidebar ul ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            width: 75%;
+            padding: 10px;
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            color: #002366;
+            text-align: center;
+        }
+
+        .separator {
+            border-top: 2px solid black;
+            margin: 20px 0;
+        }
+
+        /* Íconos en el pie de página */
+        .footer-icons a {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+        }
+
+        .footer-icons img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="container">
+        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: About me</div>
+        <div class="header-logo">
+            <a href="https://www.ufv.es" target="_blank">
+                <img src="Logo_UFV.jpg" alt="Logo UFV">
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="index.html" >Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Net</a>
+        <a href="#">Offtopic</a>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="#">Inicio</a> &gt; <span>About</span>
+    </div>
+
+    <!-- Sección principal -->
+    <main class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <h2>Cursos</h2>
+            <ul>
+                <li>
+                    <a href="curso1.html" onclick="toggleSubjects('course1')">Curso 1</a>
+                    <ul id="course1">
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                        <li><a href="#">Collage</a></li>
+                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="curso2.html" onclick="toggleSubjects('course2')">Curso 2</a>
+                    <ul id="course2">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="curso3.html" onclick="toggleSubjects('course3')">Curso 3</a>
+                    <ul id="course3">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="curso4.html" onclick="toggleSubjects('course4')">Curso 4</a>
+
+                </li>
+                <li>
+                    <a href="curso5.html" onclick="toggleSubjects('course5')">Curso 5</a>
+                    <ul id="course5">
+    
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <header>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <img src="unnamed.jpg" alt="Perfil" style="width: 100px; height: auto; border-radius: 50%;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </header>
+
+            <section>
+                <h2>WHO I THINK I AM</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            </section>
+
+            <section>
+                <h2>WHO I REALLY WANT TO BE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="blue-strip footer-icons">
+            <a href="https://linkedin.com" target="_blank">
+                <img src="linkedin_logo.png" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="GitHub_logo_2013.jpg" alt="GitHub Logo">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script para mostrar asignaturas -->
+    <script>
+        function toggleSubjects(courseId) {
+            const courses = document.querySelectorAll('.sidebar ul ul');
+            courses.forEach(course => course.classList.remove('active'));
+
+            const currentCourse = document.getElementById(courseId);
+            currentCourse.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
