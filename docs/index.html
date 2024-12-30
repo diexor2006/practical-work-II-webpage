@@ -1,161 +1,152 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-      <!-- Metadata básica -->
-      <meta charset="UTF-8"> <!-- Define la codificación de caracteres en UTF-8 -->
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura compatibilidad con navegadores antiguos -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño para dispositivos móviles -->
-      <title>UFV Web Page</title>
-  
-      <!-- Estilos -->
-      <style>
-          /* Estilos globales */
-          body {
-              margin: 0; /* Elimina los márgenes por defecto del navegador */
-              font-family: Arial, sans-serif; /* Fuente general de la página */
-              display: flex; /* Hace que el cuerpo sea un contenedor flexible */
-              flex-direction: column; /* Organiza los elementos en columna */
-              align-items: center; /* Centra horizontalmente los elementos */
-              height: 100vh; /* La página ocupa toda la altura de la pantalla */
-          }
-  
-          .container {
-              max-width: 1000px; /* Ancho máximo del contenido */
-              width: 100%; /* Ocupa todo el ancho disponible */
-              margin: 0 auto; /* Centra horizontalmente la caja */
-          }
-  
-          /* Encabezado */
-          header {
-              background-color: #002366; /* Fondo azul oscuro */
-              color: white; /* Texto blanco */
-              padding: 20px; /* Espaciado interno */
-              display: flex; /* Flexbox para organizar los elementos */
-              justify-content: space-between; /* Distribuye los elementos a los extremos */
-              align-items: center; /* Alinea verticalmente los elementos */
-          }
-  
-          .header-title {
-              font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
-          }
-  
-          .header-logo img {
-              width: 200px; /* Ancho del logo */
-              height: auto; /* Mantiene la proporción del logo */
-          }
-  
-          /* Barra de navegación */
-          nav {
-              background-color: #001a4d; /* Fondo azul oscuro */
-              padding: 10px 0; /* Espaciado vertical interno */
-              text-align: center; /* Centra los elementos horizontalmente */
-          }
-  
-          nav a {
-              margin: 0; /* Sin márgenes entre enlaces */
-              color: white; /* Color del texto blanco */
-              text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
-              padding: 10px 15px; /* Espaciado interno de los botones */
-              background-color: #002366; /* Fondo azul más claro */
-              border-radius: 5px; /* Bordes redondeados */
-              display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
-              width: 174px; /* Ancho fijo para los botones */
-              text-align: center; /* Centra el texto dentro de los botones */
-          }
-  
-          nav a:hover {
-              background-color: #555; /* Cambia el fondo al pasar el cursor */
-          }
-  
-          nav a.active {
-              background-color: white; /* Fondo blanco para el botón activo */
-              color: #002366; /* Texto azul oscuro */
-          }
-   /* Bread crumbs */
-   .breadcrumbs {
-            font-size: 0.9rem; /* Tamaño de texto más pequeño */
-            color: #fff; /* Texto blanco */
-            margin: 0px 0; /* Espaciado vertical */
-            text-align: left; /* Alinea a la izquierda */
-            background-color: #002366; /* Fondo azul oscuro */
-            padding: 10px; /* Espaciado interno */
-            width: 1018px; /* Ajusta el ancho */
-        }
+<html lang="en">
+<head>
+    <!-- Metadata básica -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
 
-        .breadcrumbs a {
-            color: #aad4ff; /* Color azul claro para los enlaces */
-            text-decoration: none; /* Sin subrayado */
-        }
-
-        .breadcrumbs a:hover {
-            text-decoration: underline; /* Subrayado al pasar el cursor */
-        }
-  
-          /* Franja azul para los íconos del pie de página */
-          .blue-strip {
-              background-color: #002366; /* Fondo azul oscuro */
-              display: flex; /* Flexbox para organizar íconos */
-              justify-content: space-around; /* Espaciado uniforme entre los íconos */
-              padding: 20px 0; /* Espaciado vertical interno */
-              width: 1000px; /* Ancho fijo */
-          }
-  
-        /* Sección principal */
-        main {
+    <!-- Estilos -->
+    <style>
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
             display: flex;
-            padding: 20px;
-            background-color: #ffffff;
-            flex: 1;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
         }
 
-        /* Barra lateral */
-        .sidebar {
-            width: 25%;
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #001a4d;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .header-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #001a4d;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: white;
+            color: #002366;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #001a4d;
             padding: 10px;
         }
 
+        .breadcrumbs a {
+            color: #aad4ff;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        main {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Menú de cursos */
+        .sidebar {
+            width: 25%;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
         .sidebar h2 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #002366;
+            margin-bottom: 15px;
         }
 
         .sidebar ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .sidebar ul li {
-            margin: 10px 0;
+            margin-bottom: 10px;
         }
 
-        .sidebar ul ul {
-            margin-left: 20px;
-            display: none; /* Oculta las asignaturas por defecto */
-        }
-
-        .sidebar ul ul.active {
-            display: block; /* Muestra las asignaturas del curso activo */
-        }
-
-        .sidebar ul ul li a {
-            color: #002366;
+        .sidebar ul li a {
             text-decoration: none;
+            color: #002366;
+            display: inline-block;
+            margin-bottom: 5px;
         }
 
-        .sidebar ul ul li a:hover {
+        .sidebar ul li a:hover {
             text-decoration: underline;
         }
 
-        /* Contenido principal */
+        /* Sección principal */
         .main-content {
-            width: 75%;
-            padding: 10px;
+            flex: 1;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .main-content h1 {
             font-size: 1.5rem;
             color: #002366;
-            text-align: center;
         }
 
         .separator {
@@ -163,30 +154,49 @@
             margin: 20px 0;
         }
 
-        /* Íconos en el pie de página */
+        /* Pie de página */
+        footer {
+            background-color: #001a4d;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
         .footer-icons a {
             background-color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 0;
+            border-radius: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40%;
         }
 
         .footer-icons img {
-            width: 200px;
-            height: auto;
+            width: auto;
+            height: 50px;
         }
+
+        /* Nueva clase para ocultar y mostrar */
+        .hidden {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
     <!-- Encabezado -->
-    <header class="container">
-        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: site name</div>
+    <header>
+        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: Home</div>
         <div class="header-logo">
             <a href="https://www.ufv.es" target="_blank">
-                <img src="Logo_UFV.jpg" alt="Logo UFV">
+                <img src="images/Logo_UFV.jpg" alt="Logo UFV">
             </a>
         </div>
     </header>
@@ -194,53 +204,102 @@
     <!-- Barra de navegación -->
     <nav>
         <a href="#" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="#">Net</a>
-        <a href="#">Offtopic</a>
+        <a href="public/about.html">About</a>
+        <a href="public/contact.html">Contact</a>
+        <a href="public/net.html">Net</a>
+        <a href="public/offtopic.html">Offtopic</a>
     </nav>
 
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">
-        <a href="#">Inicio</a> &gt; <span>Home</span>
+        <a href="#">Where am I?</a> &gt; <span>Home</span>
     </div>
 
-    <!-- Sección principal -->
+    <!-- Contenedor principal -->
     <main class="container">
-        <!-- Barra lateral -->
+        <!-- Menú de cursos -->
         <div class="sidebar">
-            <h2>Cursos</h2>
+            <h2>Degree</h2>
             <ul>
                 <li>
-                    <a href="curso1.html" onclick="toggleSubjects('course1')">Curso 1</a>
-                    <ul id="course1">
-                        <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                    <a href="#" onclick="toggleSubjects('course1')"><strong>Year 1</strong></a>
+                    <ul id="course1" class="hidden">
+                        <li><a href="public/curso1.html">General</a></li>
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentals of Computer Engineering</a></li>
                         <li><a href="#">Collage</a></li>
-                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                        <li><a href="#">Logic and Critical Thinking</a></li>
+                        <li><a href="#">Financial Accounting</a></li>
+                        <li><a href="#">Foundations of Data Science and Big Data</a></li>
+                        <li><a href="#">Electronics and Computer Technology</a></li>
+                        <li><a href="#">Technological Tools for Business and Data Analytics</a></li>
+                        <li><a href="#">Maths for Engineering II</a></li>
+                    </ul>
+                    
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course2')"><strong>Year 2</strong></a>
+                    <ul id="course2" class="hidden">
+                        <li><a href="public/curso2.html">General</a></li>
+                        <li><a href="#">Microeconomy</a></li>
+                        <li><a href="#">Introduction to Statistics and Probability </a></li>
+                        <li><a href="#">History of Science and Technology</a></li>
+                        <li><a href="#">Anthropology</a></li>
+                        <li><a href="#">Maths for Engineering I</a></li>
+                        <li><a href="#">Data Governance and Management</a></li>
+                        <li><a href="#">Big Data Technology I</a></li>
+                        <li><a href="#">Programación I</a></li>
+                        <li><a href="#">Data Sources </a></li>
+                        <li><a href="#">Discrete Mathematics</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="curso2.html" onclick="toggleSubjects('course2')">Curso 2</a>
-                    <ul id="course2">
-                        <li><a href="#">Asignatura 1</a></li>
-                        <li><a href="#">Asignatura 2</a></li>
+                    <a href="#" onclick="toggleSubjects('course3')"><strong>Year 3</strong></a>
+                    <ul id="course3" class="hidden">
+                        <li><a href="public/curso3.html">General</a></li>
+                        <li><a href="#">Microeconomy</a></li>
+                        <li><a href="#">Introduction to Statistics and Probability </a></li>
+                        <li><a href="#">History of Science and Technology</a></li>
+                        <li><a href="#">Anthropology</a></li>
+                        <li><a href="#">Maths for Engineering I</a></li>
+                        <li><a href="#">Data Governance and Management</a></li>
+                        <li><a href="#">Big Data Technology I</a></li>
+                        <li><a href="#">Programación I</a></li>
+                        <li><a href="#">Data Sources </a></li>
+                        <li><a href="#">Discrete Mathematics</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="curso3.html" onclick="toggleSubjects('course3')">Curso 3</a>
-                    <ul id="course3">
-                        <li><a href="#">Asignatura 1</a></li>
-                        <li><a href="#">Asignatura 2</a></li>
+                    <a href="#" onclick="toggleSubjects('course4')"><strong>Year 4</strong></a>
+                    <ul id="course4" class="hidden">
+                        <li><a href="public/curso4.html">General</a></li>
+                        <li><a href="#">Microeconomy</a></li>
+                        <li><a href="#">Introduction to Statistics and Probability </a></li>
+                        <li><a href="#">History of Science and Technology</a></li>
+                        <li><a href="#">Anthropology</a></li>
+                        <li><a href="#">Maths for Engineering I</a></li>
+                        <li><a href="#">Data Governance and Management</a></li>
+                        <li><a href="#">Big Data Technology I</a></li>
+                        <li><a href="#">Programación I</a></li>
+                        <li><a href="#">Data Sources </a></li>
+                        <li><a href="#">Discrete Mathematics</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="curso4.html" onclick="toggleSubjects('course4')">Curso 4</a>
-
-                </li>
-                <li>
-                    <a href="curso5.html" onclick="toggleSubjects('course5')">Curso 5</a>
-                    <ul id="course5">
-    
+                    <a href="#" onclick="toggleSubjects('course5')"><strong>Year 5</strong></a>
+                    <ul id="course5" class="hidden">
+                        <li><a href="public/curso5.html">General</a></li>
+                        <li><a href="#">Datathon with Social Impact</a></li>
+                        <li><a href="#">Business Intelligence</a></li>
+                        <li><a href="#">Quality Management</a></li>
+                        <li><a href="#">Knowledge Engineering</a></li>
+                        <li><a href="#">Planning and Management of IT Projects</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Human Computer Interaction</a></li>
+                        <li><a href="#">Projects II</a></li>
+                        <li><a href="#">Software Development and Integration</a></li>
+                        <li><a href="#">Software Engineering II</a></li>
+                        <li><a href="#">External Academic Internships</a></li>
+                        <li><a href="#">Final Degree Project</a></li>
                     </ul>
                 </li>
             </ul>
@@ -250,32 +309,31 @@
         <div class="main-content">
             <h1>Welcome to my page</h1>
             <div class="separator"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <p>Hello to whoever is reading. This is my webpage, where you can find several information. Information about me, other topic, or my degree.</p>
+            <p>This is my proyect for practical work II, where I´m supposed to show all my knowledge gained in FCE (Fundamentals of Computer Engineering) subject, mostly the practical part of HTML and CSS. </p>
+            <p> Please test the web all you want, check everything is in order, and I´d be glad to hear from you in the section of Contact. So if it´s your desire, leave a mail and i will read the complains or all the good things about my website. </p>
         </div>
     </main>
 
     <!-- Pie de página -->
     <footer>
-        <div class="blue-strip footer-icons">
+        <div class="footer-icons">
             <a href="https://linkedin.com" target="_blank">
-                <img src="linkedin_logo.png" alt="LinkedIn Logo">
+                <img src="images/linkedin_logo.png" alt="Logo LinkedIn">
             </a>
             <a href="https://github.com" target="_blank">
-                <img src="GitHub_logo_2013.jpg" alt="GitHub Logo">
+                <img src="images/GitHub_logo_2013.jpg" alt="Logo GitHub">
             </a>
+            <p>&copy; 2024 UFV </p>
         </div>
     </footer>
 
-    <!-- Script para mostrar asignaturas -->
     <script>
         function toggleSubjects(courseId) {
-            const courses = document.querySelectorAll('.sidebar ul ul');
-            courses.forEach(course => course.classList.remove('active'));
-
-            const currentCourse = document.getElementById(courseId);
-            currentCourse.classList.toggle('active');
+            const element = document.getElementById(courseId);
+            element.classList.toggle('hidden');
         }
     </script>
 </body>
 </html>
+

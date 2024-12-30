@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata básica -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Estilos -->
+    <style>
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #001a4d;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .header-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #001a4d;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: white;
+            color: #002366;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #001a4d;
+            padding: 10px;
+        }
+
+        .breadcrumbs a {
+            color: #aad4ff;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        main {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Menú de cursos */
+        .sidebar {
+            width: 25%;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            color: #002366;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #002366;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección principal */
+        .main-content {
+            flex: 1;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            color: #002366;
+        }
+
+        .separator {
+            border-top: 2px solid black;
+            margin: 20px 0;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #001a4d;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .footer-icons a {
+            background-color: #ffffff;
+            padding: 0;
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-icons img {
+            width: auto;
+            height: 50px;
+        }
+/* Icono */
+.information {
+            background-color: #ffffff;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .informa a {
+            background-color: #ffffff;
+            padding: 0;
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-icons img {
+            width: auto;
+            height: 50px;
+        }
+        /* Nueva clase para ocultar y mostrar */
+        .hidden {
+            display: none;
+        }
+            /* Sección de redes sociales */
+            .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media img {
+            width: 100px; /* Tamaño de iconos de redes sociales */
+            height: auto;
+            margin: 0 10px;
+        }
+
+
+        /* Nueva clase para ocultar y mostrar */
+        .hidden {
+            display: none;
+        }
+    </style>
+
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: Net</div>
+        <div class="header-logo">
+            <a href="https://www.ufv.es" target="_blank">
+                <img src="../images/Logo_UFV.jpg" alt="Logo UFV">
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="net.html">Net</a>
+        <a href="#" class="active">Offtopic</a>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="#">Where am I?</a> &gt; <span>Offtopic</span>
+    </div>
+
+<!-- Contenedor principal -->
+<main class="container">
+    <!-- Menú de cursos -->
+    <div class="sidebar">
+        <h2>Degree</h2>
+            <ul>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course1')"><strong>Year 1</strong></a>
+                    <ul id="course1" class="hidden">
+                        <li><a href="public/curso1.html">General</a></li>
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentals of Computer Engineering</a></li>
+                        <li><a href="#">Collage</a></li>
+                        <li><a href="#">Logic and Critical Thinking</a></li>
+                        <li><a href="#">Financial Accounting</a></li>
+                        <li><a href="#">Foundations of Data Science and Big Data</a></li>
+                        <li><a href="#">Electronics and Computer Technology</a></li>
+                        <li><a href="#">Technological Tools for Business and Data Analytics</a></li>
+                        <li><a href="#">Maths for Engineering II</a></li>
+                    </ul>
+                    
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course2')"><strong>Year 2</strong></a>
+                    <ul id="course2" class="hidden">
+                        <li><a href="public/curso2.html">General</a></li>
+                        <li><a href="#">Microeconomy</a></li>
+                        <li><a href="#">Introduction to Statistics and Probability </a></li>
+                        <li><a href="#">History of Science and Technology</a></li>
+                        <li><a href="#">Anthropology</a></li>
+                        <li><a href="#">Maths for Engineering I</a></li>
+                        <li><a href="#">Data Governance and Management</a></li>
+                        <li><a href="#">Big Data Technology I</a></li>
+                        <li><a href="#">Programación I</a></li>
+                        <li><a href="#">Data Sources </a></li>
+                        <li><a href="#">Discrete Mathematics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course3')"><strong>Year 3</strong></a>
+                    <ul id="course3" class="hidden">
+                        <li><a href="public/curso3.html">General</a></li>
+                        <li><a href="#">Microeconomy</a></li>
+                        <li><a href="#">Introduction to Statistics and Probability </a></li>
+                        <li><a href="#">History of Science and Technology</a></li>
+                        <li><a href="#">Anthropology</a></li>
+                        <li><a href="#">Maths for Engineering I</a></li>
+                        <li><a href="#">Data Governance and Management</a></li>
+                        <li><a href="#">Big Data Technology I</a></li>
+                        <li><a href="#">Programación I</a></li>
+                        <li><a href="#">Data Sources </a></li>
+                        <li><a href="#">Discrete Mathematics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course4')"><strong>Year 4</strong></a>
+                    <ul id="course4" class="hidden">
+                        <li><a href="public/curso4.html">General</a></li>
+                        <li><a href="#">Microeconomy</a></li>
+                        <li><a href="#">Introduction to Statistics and Probability </a></li>
+                        <li><a href="#">History of Science and Technology</a></li>
+                        <li><a href="#">Anthropology</a></li>
+                        <li><a href="#">Maths for Engineering I</a></li>
+                        <li><a href="#">Data Governance and Management</a></li>
+                        <li><a href="#">Big Data Technology I</a></li>
+                        <li><a href="#">Programación I</a></li>
+                        <li><a href="#">Data Sources </a></li>
+                        <li><a href="#">Discrete Mathematics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course5')"><strong>Year 5</strong></a>
+                    <ul id="course5" class="hidden">
+                        <li><a href="public/curso5.html">General</a></li>
+                        <li><a href="#">Datathon with Social Impact</a></li>
+                        <li><a href="#">Business Intelligence</a></li>
+                        <li><a href="#">Quality Management</a></li>
+                        <li><a href="#">Knowledge Engineering</a></li>
+                        <li><a href="#">Planning and Management of IT Projects</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Human Computer Interaction</a></li>
+                        <li><a href="#">Projects II</a></li>
+                        <li><a href="#">Software Development and Integration</a></li>
+                        <li><a href="#">Software Engineering II</a></li>
+                        <li><a href="#">External Academic Internships</a></li>
+                        <li><a href="#">Final Degree Project</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <h1>ETHICAL HACKING</h1>
+            <div class="separator"></div>
+            <h2> Introduction</h2>
+                <p>Ethical hacking can be defined as “an authorized attempt to gain unauthorized access to a
+                    computer system, application, or data using the strategies and actions of malicious attackers” .
+                    Unlike black-hat hackers, ethical hackers work with the permission of the organization to find
+                    vulnerabilities and recommend solutions to fix them. This proactive approach helps
+                    organizations prevent costly security breaches and data leaks.
+                    As cyberattacks become more frequent and sophisticated, the role of ethical hackers has
+                    gained prominence. According to INFOSEC, there has been a 38% increase in cyberattacks
+                    year over year . In response, the market for ethical hacking services is expected to grow
+                    significantly, from $3.4 billion in 2023 to $10.24 billion by 2028.
+                    Ethical hacking serves not only as a tool for identifying vulnerabilities but also as a crucial
+                    means of building trust between companies and their clients. Organizations that prioritize
+                    security by employing ethical hackers reassure stakeholders that their data is being protected.</p>
+            <p>Ethical hacking gained attention after major security breaches, such as the Equifax data breach
+                in 2017. Equifax, one of the largest credit reporting agencies in the U.S., failed to patch a known
+                vulnerability in its system, resulting in the exposure of personal data of 147 million people.
+                Ethical hackers, had they been employed by Equifax, could have identified and fixed the
+                vulnerability in time to prevent the breach. </p>
+         <h2>  Key Roles of Ethical Hackers:</h2>
+           <p>   1. Penetration Testing: Ethical hackers simulate cyberattacks to identify weaknesses in
+                security defenses. These controlled attacks mimic real-world scenarios, giving
+                organizations the opportunity to fix vulnerabilities before they are exploited by actual
+                hackers .</p>
+                <p>2. Vulnerability Assessment: Ethical hackers use manual and automated tools to find and
+                prioritize vulnerabilities within a system, providing organizations with a comprehensive
+                list of potential risks .</p>
+               <p> 3. Malware Analysis: Some ethical hackers specialize in analyzing ransomware and other
+                types of malware to understand how these malicious programs work and how to defend
+                against them . </p>
+                <h2>  Advantages of Ethical Hackers:</h2>
+                <p><b>Identification of Vulnerabilities from an Attacker’s Perspective: </b>Ethical hackers use
+                    the same tactics as malicious attackers, providing a realistic assessment of how hackers
+                    could potentially exploit weaknesses.</p>
+                    <p><b>Mitigation of Business Risks:</b> By identifying and fixing vulnerabilities before they can
+                        be exploited, ethical hacking reduces the risk of costly data breaches and associated
+                        business losses.</p>
+                        <p><b>Enhanced Customer and Stakeholder Confidence:</b> Organizations that proactively
+                            engage in ethical hacking demonstrate a strong commitment to cybersecurity, reassuring
+                            customers, partners, and stakeholders that their data is well-protected.</p>
+                <h2>Limitations of ethical Hacking</h2>
+                <p><b>Scope Limitations:</b> Ethical hackers can only test within the predefined boundaries set
+                    by the organization. This can leave vulnerabilities untested in areas outside the
+                    agreed-upon scope .</p>
+                    <p><b>Resource Constraints:</b> Ethical hackers often face limitations in time, budget, and
+                        computing power, whereas malicious hackers can spend as much time and resources as
+                        necessary to breach a system.</p>
+                        <p><b>Method Restrictions:</b> Some organizations restrict certain testing methods, such as
+                            denial-of-service (DoS) attacks, which can limit the ability of ethical hackers to fully
+                            simulate real-world attacks .</p>
+            <h2>Future of ethical hacking</h2>
+            <p>As cyber threats continue to evolve, ethical hacking will play an even more critical role in
+                safeguarding digital infrastructures. With the rise of AI-driven cyberattacks, ethical hackers must
+                adapt by incorporating machine learning and AI into their methodologies. Furthermore, the
+                growing adoption of cloud computing introduces new vulnerabilities, making cloud security
+                testing a major focus for ethical hackers in the years to come.</p>
+            <h2>Conclusion</h2>
+            <p>Ethical hacking is a vital component of modern cybersecurity practices. By simulating attacks
+                and identifying vulnerabilities, ethical hackers help organizations protect sensitive data, prevent
+                breaches, and ensure regulatory compliance. While ethical hacking has its limitations, its
+                benefits in protecting systems and enhancing security far outweigh the challenges. As the cyber
+                threat landscape continues to evolve, the role of ethical hackers will become even more critical
+                in safeguarding the digital world.</p>
+            <h2>Extra information to research</h2>
+            <div class="social-media">
+
+                <a href="https://d1wqtxts1xzle7.cloudfront.net/35725105/IJCST-V2I6P2-libre.pdf?1416938432=&response-content-disposition=inline%3B+filename%3DIJCST_V2I6P2_Author_Bhawana_Sahare_Anki.pdf&Expires=1735591887&Signature=Wo2y4oFaUG1BPz3ajMKzWraJYuYWmoOjejMimqjFxn3~NkxTrKlZoyBzouoWkBXqDtDUx9duZdHdYdpACYF-QVkcnFDIDV5ORivVuWdZ7xVQa6HhWi4zu0qEQeZMm5KOZp2Rw9SmDExhDUO62RSLIxv2xXVtdzYAjnPwx5nrTxWbQHiVhbHSobzjj27r~xUutDGZZ4t35C3TVtDET~NJRVWKfbF2eXxKBUmKxjAcpFOPYeeqfQ20wxG9Qud61bsDMnd~D2RgZtaix93JuX7nbM~qgQ9mHuE0WHH2BgnSHwduFPncz08dI~yG2wQfO00kSsGRk1fY2N4BOeMLtZhX-w__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA"_blank">
+                    <img src="../images/informacion.png" alt="Instagram">
+                </a>
+                <a href="http://digitalmediafys.pbworks.com/w/file/fetch/60359759/jamild2011ethicalhacking.pdf" target="_blank">
+                    <img src="../images/informacion2.jpg" alt="Twitter">
+              
+        
+               
+               
+            </div>
+        </div>
+    </main>
+<!-- Pie de página -->
+<footer>
+    <div class="footer-icons">
+        <a href="https://linkedin.com" target="_blank">
+            <img src="../images/linkedin_logo.png" alt="Logo LinkedIn">
+        </a>
+        <a href="https://github.com" target="_blank">
+            <img src="../images/GitHub_logo_2013.jpg" alt="Logo GitHub">
+        </a>
+    </div>
+    <p>&copy; 2024 UFV</p>
+</footer>
+
+
+    <script>
+        function toggleSubjects(courseId) {
+            const element = document.getElementById(courseId);
+            element.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+
