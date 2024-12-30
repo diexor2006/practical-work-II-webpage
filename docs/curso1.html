@@ -44,34 +44,33 @@
             height: auto; /* Mantiene la proporción del logo */
         }
 
-        /* Barra de navegación */
-        nav {
-            background-color: #001a4d; /* Fondo azul oscuro */
-            padding: 10px 0; /* Espaciado vertical interno */
-            text-align: center; /* Centra los elementos horizontalmente */
-        }
-
-        nav a {
-            margin: 0; /* Sin márgenes entre enlaces */
-            color: white; /* Color del texto blanco */
-            text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
-            padding: 10px 15px; /* Espaciado interno de los botones */
-            background-color: #002366; /* Fondo azul más claro */
-            border-radius: 5px; /* Bordes redondeados */
-            display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
-            width: 174px; /* Ancho fijo para los botones */
-            text-align: center; /* Centra el texto dentro de los botones */
-        }
-
-        nav a:hover {
-            background-color: #555; /* Cambia el fondo al pasar el cursor */
-        }
-
-        nav a.active {
-            background-color: white; /* Fondo blanco para el botón activo */
-            color: #002366; /* Texto azul oscuro */
-        }
-
+          /* Barra de navegación */
+          nav {
+              background-color: #001a4d; /* Fondo azul oscuro */
+              padding: 10px 0; /* Espaciado vertical interno */
+              text-align: center; /* Centra los elementos horizontalmente */
+          }
+  
+          nav a {
+              margin: 0; /* Sin márgenes entre enlaces */
+              color: white; /* Color del texto blanco */
+              text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+              padding: 10px 15px; /* Espaciado interno de los botones */
+              background-color: #002366; /* Fondo azul más claro */
+              border-radius: 5px; /* Bordes redondeados */
+              display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
+              width: 174px; /* Ancho fijo para los botones */
+              text-align: center; /* Centra el texto dentro de los botones */
+          }
+  
+          nav a:hover {
+              background-color: #555; /* Cambia el fondo al pasar el cursor */
+          }
+  
+          nav a.active {
+              background-color: white; /* Fondo blanco para el botón activo */
+              color: #002366; /* Texto azul oscuro */
+          }
         /* Bread crumbs */
         .breadcrumbs {
             font-size: 0.9rem; /* Tamaño de texto más pequeño */
@@ -109,45 +108,38 @@
             flex: 1; /* Se expande para ocupar todo el espacio vertical restante */
         }
 
-        /* Barra lateral */
-        .sidebar {
-            width: 25%; /* Ancho fijo del 25% para la barra lateral */
-            padding: 10px; /* Espaciado interno */
+            /* Barra lateral */
+            .sidebar {
+            width: 25%;
+            padding: 10px;
         }
 
         .sidebar h2 {
-            font-size: 1.2rem; /* Tamaño del texto del encabezado */
-            margin-bottom: 10px; /* Espaciado inferior */
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
         .sidebar ul {
-            list-style: none; /* Elimina los puntos de las listas */
-            padding: 0; /* Sin relleno interno */
-        }
-
-        .sidebar ul li {
-            margin: 10px 0; /* Espaciado entre los elementos de la lista */
+            list-style: none;
+            padding: 0;
         }
 
         .sidebar ul ul {
-            margin-left: 20px; /* Indentación de las asignaturas desglosadas */
+            margin-left: 20px;
+            display: none;
         }
 
-        /* Contenido principal */
-        .main-content {
-            width: 75%; /* Ancho fijo del 75% para el contenido principal */
-            padding: 10px; /* Espaciado interno */
+        .sidebar ul ul.active {
+            display: block;
         }
 
-        .main-content h1 {
-            font-size: 1.5rem; /* Tamaño del título principal */
-            color: #002366; /* Color azul oscuro */
-            text-align: center; /* Centra el título */
+        .sidebar ul li a {
+            color: #002366;
+            text-decoration: none;
         }
 
-        .separator {
-            border-top: 2px solid black; /* Línea horizontal negra */
-            margin: 20px 0; /* Espaciado superior e inferior */
+        .sidebar ul li a:hover {
+            text-decoration: underline;
         }
 
         /* Íconos en el pie de página */
@@ -182,10 +174,10 @@
     <!-- Barra de navegación -->
     <nav>
         <a href="index.html">Home</a>
-        <a href="#" class="active">Curso 1</a>
-        <a href="#">Curso 2</a>
-        <a href="#">Curso 3</a>
-        <a href="#">Curso 4</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Net</a>
+        <a href="#">Offtopic</a>
     </nav>
 
     <!-- Breadcrumbs -->
@@ -193,24 +185,44 @@
         <a href="index.html">Inicio</a> &gt; <span>Curso 1</span>
     </div>
 
-    <!-- Sección principal -->
-    <main class="container">
-        <!-- Barra lateral -->
-        <div class="sidebar">
-            <h2>Cursos</h2>
-            <ul>
-                <li><a href="curso1.html">Curso 1</a>
-                    <ul>
-                        <li><a href="#">Collage</a></li>
-                        <li><a href="#">Fundamentos de Informática</a></li>
-                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Curso 2</a></li>
-                <li><a href="#">Curso 3</a></li>
-                <li><a href="#">Curso 4</a></li>
-            </ul>
-        </div>
+   <!-- Sección principal -->
+   <main class="container">
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <h2>Cursos</h2>
+        <ul>
+            <li>
+                <a href="#" onclick="toggleSubjects('course1')">Curso 1</a>
+                <ul id="course1">
+                    <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                    <li><a href="#">Collage</a></li>
+                    <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubjects('course2')">Curso 2</a>
+                <ul id="course2">
+                    <li><a href="#">Asignatura 1</a></li>
+                    <li><a href="#">Asignatura 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubjects('course3')">Curso 3</a>
+                <ul id="course3">
+                    <li><a href="#">Asignatura 1</a></li>
+                    <li><a href="#">Asignatura 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubjects('course4')">Curso 4</a>
+                <ul id="course4">
+                    <li><a href="#">Asignatura 1</a></li>
+                    <li><a href="#">Asignatura 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
 
         <!-- Contenido principal -->
         <div class="main-content">
@@ -231,5 +243,15 @@
             </a>
         </div>
     </footer>
+     <!-- Script para mostrar asignaturas -->
+     <script>
+        function toggleSubjects(courseId) {
+            const courses = document.querySelectorAll('.sidebar ul ul');
+            courses.forEach(course => course.classList.remove('active'));
+
+            const currentCourse = document.getElementById(courseId);
+            currentCourse.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

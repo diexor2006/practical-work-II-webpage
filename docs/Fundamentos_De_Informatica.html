@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Metadata básica -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres en UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura compatibilidad con navegadores antiguos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño para dispositivos móviles -->
+    <title>Fundamentos de Informática</title> <!-- Título de la página -->
+
+    <!-- Estilos -->
+    <style>
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #002366;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.5rem;
+        }
+
+        .header-logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #001a4d;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #002366;
+            border-radius: 5px;
+            display: inline-block;
+            width: 174px;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: white;
+            color: #002366;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            font-size: 0.9rem;
+            color: #fff;
+            margin: 0;
+            text-align: left;
+            background-color: #002366;
+            padding: 10px;
+            width: 66.3%;
+        }
+
+        .breadcrumbs a {
+            color: #aad4ff;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        /* Botones de temas */
+        .topics-nav {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            padding: 0px 0;
+            width: 66.3%;
+        }
+
+        .topics-nav a {
+            color: #002366;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #002366;
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        .topics-nav a:hover {
+            background-color: #002366;
+            color: white;
+        }
+
+        /* Sección principal */
+        main {
+            display: flex;
+            padding: 20px;
+            background-color: #ffffff;
+            flex: 1;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul ul {
+            margin-left: 20px;
+            display: none; /* Oculta las asignaturas por defecto */
+        }
+
+        .sidebar ul ul.active {
+            display: block; /* Muestra las asignaturas del curso activo */
+        }
+
+        .sidebar ul ul li a {
+            color: #002366;
+            text-decoration: none;
+        }
+
+        .sidebar ul ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            width: 75%;
+            padding: 10px;
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            color: #002366;
+        }
+
+        .separator {
+            border-top: 2px solid black;
+            margin: 20px 0;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* Pie de página */
+        .footer-icons {
+            background-color: #002366; /* Fondo azul oscuro */
+            display: flex; /* Flexbox para organizar íconos */
+            justify-content: space-around; /* Espaciado uniforme entre los íconos */
+            padding: 20px 0; /* Espaciado vertical interno */
+            width: 1000px; /* Ancho fijo */
+        }
+
+        .footer-icons a {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+        }
+
+        .footer-icons img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="container">
+        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: Fundamentos de Informática</div>
+        <div class="header-logo">
+            <a href="https://www.ufv.es" target="_blank">
+                <img src="Logo_UFV.jpg" alt="Logo UFV">
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Net</a>
+        <a href="#">Offtopic</a>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="index.html">Inicio</a> &gt; <a href="curso1.html">Curso 1</a> &gt; <span>Fundamentos de Informática</span>
+    </div>
+
+    <!-- Botones de temas -->
+    <div class="topics-nav">
+        <a href="#" onclick="showTopic(1)">Tema 1</a>
+        <a href="#" onclick="showTopic(2)">Tema 2</a>
+        <a href="#" onclick="showTopic(3)">Tema 3</a>
+        <a href="#" onclick="showTopic(4)">Tema 4</a>
+        <a href="#" onclick="showTopic(5)">Tema 5</a>
+    </div>
+
+    <!-- Sección principal -->
+    <main class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <h2>Cursos</h2>
+            <ul>
+                <li>
+                    <a href="curso1.html" onclick="toggleSubjects('course1')">Curso 1</a>
+                    <ul id="course1" class="active">
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                        <li><a href="#">Collage</a></li>
+                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course2')">Curso 2</a>
+                    <ul id="course2">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course3')">Curso 3</a>
+                    <ul id="course3">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course4')">Curso 4</a>
+                    <ul id="course4">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <section id="topic1" class="active">
+                <h1>Tema 1</h1>
+                <div class="separator"></div>
+                <p>Contenido del tema 1.</p>
+            </section>
+            <section id="topic2">
+                <h1>Tema 2</h1>
+                <div class="separator"></div>
+                <p>Contenido del tema 2.</p>
+            </section>
+            <section id="topic3">
+                <h1>Tema 3</h1>
+                <div class="separator"></div>
+                <p>Contenido del tema 3.</p>
+            </section>
+            <section id="topic4">
+                <h1>Tema 4</h1>
+                <div class="separator"></div>
+                <p>Contenido del tema 4.</p>
+            </section>
+            <section id="topic5">
+                <h1>Tema 5</h1>
+                <div class="separator"></div>
+                <p>Contenido del tema 5.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://linkedin.com" target="_blank">
+                <img src="linkedin_logo.png" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="GitHub_logo_2013.jpg" alt="GitHub Logo">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script para mostrar asignaturas -->
+    <script>
+        function toggleSubjects(courseId) {
+            const courses = document.querySelectorAll('.sidebar ul ul');
+            courses.forEach(course => course.classList.remove('active'));
+
+            const currentCourse = document.getElementById(courseId);
+            currentCourse.classList.toggle('active');
+        }
+
+        function showTopic(topicNumber) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const currentSection = document.getElementById(`topic${topicNumber}`);
+            currentSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>

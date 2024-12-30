@@ -101,127 +101,175 @@
               width: 1000px; /* Ancho fijo */
           }
   
-          /* Sección principal */
-          main {
-              display: flex; /* Flexbox para organizar barra lateral y contenido principal */
-              padding: 20px; /* Espaciado interno */
-              background-color: #ffffff; /* Fondo blanco */
-              flex: 1; /* Se expande para ocupar todo el espacio vertical restante */
-          }
-  
-          /* Barra lateral */
-          .sidebar {
-              width: 25%; /* Ancho fijo del 25% para la barra lateral */
-              padding: 10px; /* Espaciado interno */
-          }
-  
-          .sidebar h2 {
-              font-size: 1.2rem; /* Tamaño del texto del encabezado */
-              margin-bottom: 10px; /* Espaciado inferior */
-          }
-  
-          .sidebar ul {
-              list-style: none; /* Elimina los puntos de las listas */
-              padding: 0; /* Sin relleno interno */
-          }
-  
-          .sidebar ul li {
-              margin: 10px 0; /* Espaciado entre los elementos de la lista */
-          }
-  
-          /* Contenido principal */
-          .main-content {
-              width: 75%; /* Ancho fijo del 75% para el contenido principal */
-              padding: 10px; /* Espaciado interno */
-          }
-  
-          .main-content h1 {
-              font-size: 1.5rem; /* Tamaño del título principal */
-              color: #002366; /* Color azul oscuro */
-              text-align: center; /* Centra el título */
-          }
-  
-          .separator {
-              border-top: 2px solid black; /* Línea horizontal negra */
-              margin: 20px 0; /* Espaciado superior e inferior */
-          }
-  
-          /* Íconos en el pie de página */
-          .footer-icons a {
-              background-color: #ffffff; /* Fondo blanco para los íconos */
-              padding: 10px; /* Espaciado interno */
-              border-radius: 5px; /* Bordes redondeados */
-              display: flex; /* Flexbox para centrar los íconos */
-              justify-content: center; /* Centra horizontalmente */
-              align-items: center; /* Centra verticalmente */
-              width: 40%; /* Ancho del contenedor del ícono */
-          }
-  
-          .footer-icons img {
-              width: 200px; /* Tamaño más grande para los íconos */
-              height: auto; /* Mantiene la proporción */
-              margin: 0; /* Sin márgenes */
-          }
-      </style>
-  </head>
-  <body>
-      <!-- Encabezado -->
-      <header class="container">
-          <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: site name</div>
-          <div class="header-logo">
-              <a href="https://www.ufv.es" target="_blank">
-                  <img src="Logo_UFV.jpg" alt="Logo UFV">
-              </a>
-          </div>
-      </header>
-  
-      <!-- Barra de navegación -->
-      <nav>
-          <a href="#" class="active">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Net</a>
-          <a href="#">Offtopic</a>
-      </nav>
-  
-      <!-- Breadcrumbs -->
-      <div class="breadcrumbs">
-          <a href="#">Inicio</a> &gt; <span>Home</span>
-      </div>
-  
-      <!-- Sección principal -->
-      <main class="container">
-          <!-- Barra lateral -->
-          <div class="sidebar">
-              <h2>Main content</h2>
-              <ul>
-                <li><a href="curso1.html">Curso 1</a></li>
-                  <li>Curso 2</li>
-                  <li>Curso 3</li>
-                  <li>Curso 4</li>
-              </ul>
-          </div>
-  
-          <!-- Contenido principal -->
-          <div class="main-content">
-              <h1>Welcome to my page</h1>
-              <div class="separator"></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-              <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-          </div>
-      </main>
-  
-      <!-- Pie de página -->
-      <footer>
-          <div class="blue-strip footer-icons">
-              <a href="https://linkedin.com" target="_blank">
-                  <img src="linkedin_logo.png" alt="LinkedIn Logo">
-              </a>
-              <a href="https://github.com" target="_blank">
-                  <img src="GitHub_logo_2013.jpg" alt="GitHub Logo">
-              </a>
-          </div>
-      </footer>
-      
-  </body>
-  </html>
+        /* Sección principal */
+        main {
+            display: flex;
+            padding: 20px;
+            background-color: #ffffff;
+            flex: 1;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul ul {
+            margin-left: 20px;
+            display: none;
+        }
+
+        .sidebar ul ul.active {
+            display: block;
+        }
+
+        .sidebar ul li a {
+            color: #002366;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            width: 75%;
+            padding: 10px;
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            color: #002366;
+            text-align: center;
+        }
+
+        .separator {
+            border-top: 2px solid black;
+            margin: 20px 0;
+        }
+
+        /* Íconos en el pie de página */
+        .footer-icons a {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+        }
+
+        .footer-icons img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="container">
+        <div class="header-title">UFV WEB FRONTEND WORKSHOP 16: site name</div>
+        <div class="header-logo">
+            <a href="https://www.ufv.es" target="_blank">
+                <img src="Logo_UFV.jpg" alt="Logo UFV">
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Net</a>
+        <a href="#">Offtopic</a>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="#">Inicio</a> &gt; <span>Home</span>
+    </div>
+
+    <!-- Sección principal -->
+    <main class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <h2>Cursos</h2>
+            <ul>
+                <li>
+                    <a href="curso1.html" onclick="toggleSubjects('course1')">Curso 1</a>
+                    <ul id="course1">
+                        <li><a href="Fundamentos_De_Informatica.html">Fundamentos de Informática</a></li>
+                        <li><a href="#">Collage</a></li>
+                        <li><a href="#">Lógica y Pensamiento Crítico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course2')">Curso 2</a>
+                    <ul id="course2">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course3')">Curso 3</a>
+                    <ul id="course3">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubjects('course4')">Curso 4</a>
+                    <ul id="course4">
+                        <li><a href="#">Asignatura 1</a></li>
+                        <li><a href="#">Asignatura 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <h1>Welcome to my page</h1>
+            <div class="separator"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="blue-strip footer-icons">
+            <a href="https://linkedin.com" target="_blank">
+                <img src="linkedin_logo.png" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="GitHub_logo_2013.jpg" alt="GitHub Logo">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script para mostrar asignaturas -->
+    <script>
+        function toggleSubjects(courseId) {
+            const courses = document.querySelectorAll('.sidebar ul ul');
+            courses.forEach(course => course.classList.remove('active'));
+
+            const currentCourse = document.getElementById(courseId);
+            currentCourse.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
